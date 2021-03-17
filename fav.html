@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/fav.css" />
+    <title>691 - Favoris</title>
+</head>
+<body>
+
+    <!-- searchbar w/ filters -->
+    <searchbar>
+        <input type="text" name="searchbar" id="searchbar" />
+        <button>Rechercher</button>
+        <select name="technoFilter" id="technoFilter">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+            <option value="git">Git</option>
+            <option value="bash">Bash (Terminal)</option>
+        </select>
+        <label for="snippetsOnly">Snippets seulement</label>
+        <input type="checkbox" name="snippetsOnly" id="snippetsOnly">
+    </searchbar>
+
+    <content>
+        <div id="favCard">
+            <h3>&lt;button&gt;</h1>
+            <p>
+                L'élément HTML &lt;button&gt; est utilisé afin de créer un contrôle interactif ayant la forme d'un bouton et qui pourra être utilisé dans un formulaire ou dans le document.
+            </p>
+            <hr />
+            <button>+</button>
+        </div>
+    </content>
+    
+</body>
+</html>
