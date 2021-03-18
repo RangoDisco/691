@@ -1,0 +1,151 @@
+/* Couleurs */
+:root {
+  --main-black: #363636;
+  --main-grey: #474747;
+  --main-pink: #e8175d;
+  --secondary-pink: #cc527a;
+  --secondary-grey: #a8a7a7;
+}
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/* Search and Options */
+.searchOptions {
+  background-color: var(--secondary-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 1px 1px var(--main-black);
+}
+.searchBar {
+  margin-top: 3vh;
+  position: relative;
+  display: flex;
+}
+#searchbar {
+  width: 100%;
+  border: 1px solid black;
+  border-right: none;
+  padding: 5px;
+  height: 23px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+button {
+  width: 40px;
+  height: 35px;
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.technologies {
+  width: 90%;
+  margin: 3vh 0 3vh 0;
+}
+.technologies select {
+  width: 100%;
+}
+
+.snippetButton {
+  margin-bottom: 3vh;
+}
+
+/*Articles */
+.articlesList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 0 2rem 0 2rem;
+}
+.articleImg {
+  display: none;
+}
+.article {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5%;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+}
+.articleTitle {
+  padding: 1vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--secondary-grey);
+}
+.articleFavorite {
+  color: goldenrod;
+}
+.articleTitle {
+  color: var(--secondary-pink);
+}
+.articleDescription {
+  padding: 2rem 1rem 2rem 1rem;
+  text-align: center;
+  border-bottom: 2px solid var(--secondary-grey);
+}
+.articleSnippet {
+  display: none;
+}
+.open {
+  height: 100%;
+  padding: 0.5rem;
+  color: var(--secondary-pink);
+}
+
+@media (min-width: 990px) {
+  /* Search & Options */
+  .searchBar {
+    width: 50vw;
+  }
+  .technologies {
+    width: 50vw;
+  }
+  /* Articles */
+  .article {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 40vh;
+    border-radius: 0;
+    background-color: var(--secondary-grey);
+  }
+  .articleImg {
+    display: block;
+  }
+  .articleImg img {
+    height: 15vh;
+  }
+  .articleBody {
+    display: flex;
+    flex-direction: row;
+  }
+  .titleDesc {
+    min-width: fit-content;
+    max-width: 40%;
+  }
+  .articleTitle {
+    background-color: var(--secondary-grey);
+  }
+  .articleDescription {
+    text-align: left;
+    border: none;
+  }
+  .articleSnippet {
+    text-align: left;
+    display: flex;
+    padding: 2rem 1rem 2rem 1rem;
+  }
+  .open {
+    display: none;
+  }
+}
