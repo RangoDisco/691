@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/fav.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
+    <link rel="stylesheet"
+      href="//unpkg.com/@highlightjs/cdn-assets@10.6.0/styles/default.min.css">
     <title>691 - Favoris</title>
 </head>
 <body>
@@ -12,7 +14,7 @@
     <modal>
         <div id="modalHeader">
             <h2>&lt;button&gt;</h2>
-            <i data-feather="x"></i>
+            <button><i data-feather="x"></i></button>
         </div>
         <div id="modalBody">
             <p>
@@ -20,9 +22,11 @@
                 <br/>Par défaut, les boutons HTML sont mis en forme avec les styles natifs provenant du système d'exploitation mais leur apparence peut être adaptée grâce à CSS.
             </p>
             <hr />
-            <code>
+            <p>Exemple de code:</p>
+            <pre><code class="language-html">
+                <button>COPIER</button><br/>
                 &lt;button&gt;Example Button&lt;/button&gt;
-            </code>
+            </code></pre>
         </div>
     </modal>
     
@@ -30,5 +34,7 @@
     <script>
         feather.replace();
     </script>
+    <script src="//unpkg.com/@highlightjs/cdn-assets@10.6.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </body>
 </html>
