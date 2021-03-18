@@ -1,56 +1,100 @@
-*{
-    --bg-color: #fffff;
-    --vive-accent: #E8175D;
-    --calm-accent: #CC527A;
-    margin: 0;
-    padding: 0;
+/* Couleurs */
+:root {
+  --main-black: #363636;
+  --main-grey: #474747;
+  --main-pink: #e8175d;
+  --secondary-pink: #cc527a;
+  --secondary-grey: #a8a7a7;
 }
-body{
-    background-color: var(--bg-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-h1{
-    text-align: left;
-    color: var(--calm-accent);
-    margin: 2vw;
+h1 {
+  text-align: left;
+  color: var(--main-pink);
+  margin: 1vw 0 1vh 2vw;
 }
 
 /* Équipe */
-.team{
-    width: 90vw;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.team {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.teamTitle{
-    align-self: flex-start;
+.teamTitle {
+  align-self: flex-start;
 }
 .img img {
-    height: 15vh;
-    width: 15vh;
-    border-radius: 50%;
-    margin-top: 3vh;
+  height: 15vh;
+  width: 15vh;
+  border-radius: 50%;
+  margin-top: 3vh;
+  border: 0.5rem solid var(--secondary-pink);
 }
-.nom{
-    margin: 1vh;
+.infos {
+  display: flex;
+  flex-direction: column;
 }
-.memberLinks{
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 1vh;
-    padding-bottom: 2vh;
-    border-bottom: 1px solid var(--vive-accent)
+.nom {
+  margin: 2vh;
+  color: var(--main-black);
+  font-size: 1.5rem;
 }
-.memberLinks a{
-color: var(--calm-accent)
+.memberLinks {
+  align-self: center;
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1vh;
+  padding-bottom: 2vh;
+  border-bottom: 1px solid var(--main-grey);
+}
+.memberLinks a {
+  color: var(--secondary-pink);
+  transition: all 200ms linear;
 }
 /* About */
-.About{
-    width: 90vw;
-}
 .aboutDescription {
-    margin-bottom: 5vh;
+  margin-bottom: 5vh;
+}
+
+@media (min-width: 960px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  /* Team */
+  .team {
+    width: 100vw;
+  }
+  .teamMembers {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .img img {
+    height: 30vh;
+    width: 30vh;
+  }
+  a:hover {
+    transform: scale(1.25);
+  }
+  /* About */
+  .About {
+    width: 100vw;
+  }
+  .aboutTitle {
+    margin-top: 5rem;
+  }
+  .aboutDescription {
+    margin: 2vh 0 0 2vw;
+    font-size: 1.2rem;
+  }
 }
