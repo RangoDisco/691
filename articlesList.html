@@ -5,59 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/articlesList.css" />
+    <link rel="stylesheet" href="css/fav.css" />
+    <link
+      rel="stylesheet"
+      href="//unpkg.com/@highlightjs/cdn-assets@10.6.0/styles/default.min.css"
+    />
     <title>691 - Articles</title>
   </head>
-  <!--Searchbar & Filters-->
   <body>
-    <div class="searchOptions">
-      <div class="searchBar">
+    <!--Searchbar & Filters-->
+    <searchbar>
+      <div id="searchBarContainer">
         <input
           type="text"
+          placeholder="Rechercher..."
           name="searchbar"
           id="searchbar"
-          placeholder="Rechercher..."
         />
-        <button><i data-feather="search"></i></button>
+        <i data-feather="search"></i>
       </div>
-      <div class="technologies">
-        <select name="technoFilter" id="technoFilter">
-          <option value="none" selected disabled hidden>Technologie</option>
-          <option value="html">HTML</option>
-          <option value="css">CSS</option>
-          <option value="javascript">Javascript</option>
-          <option value="git">Git</option>
-          <option value="bash">Bash (Terminal)</option>
-        </select>
+      <select name="technoFilter" id="technoFilter">
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javascript">JavaScript</option>
+        <option value="git">Git</option>
+        <option value="bash">Bash (Terminal)</option>
+      </select>
+      <div id="snippetsOnlyContainer">
+        <label for="snippetsOnly">Snippets seulement</label>
+        <input type="checkbox" name="snippetsOnly" id="snippetsOnly" />
       </div>
-      <div class="snippetButton">
-        <input type="checkbox" id="snippetsOnly" name="snippetsOnly" />
-        <label for="snippetsOnly">Snippets uniquement</label>
-      </div>
-    </div>
+    </searchbar>
     <!--Articles list-->
     <div class="articlesList">
       <div class="article">
         <div class="articleImg">
           <img src="img/HTML_logo.png" alt="Logo HTML" />
         </div>
-        <div class="articleNote"></div>
+        <div class="articleFav"><i data-feather="star"></i></div>
         <div class="titleDesc">
           <div class="articleTitle"><h2>TITRE</h2></div>
 
           <div class="articleDescription">
-            Les formulaires HTML sont un des vecteurs principaux d'interaction
-            entre un utilisateur et un site web ou une application. Ils
-            permettent à l'utilisateur d'envoyer des données au site web. La
-            plupart du temps, ces données sont envoyées à des serveurs web mais
-            la page peut aussi les intercepter et les utiliser elle-même.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum
           </div>
         </div>
         <div class="articleSnippet">
-          Les formulaires HTML sont un des vecteurs principaux d'interaction
-          entre un utilisateur et un site web ou une application. Ils permettent
-          à l'utilisateur d'envoyer des données au site web. La plupart du
-          temps, ces données sont envoyées à des serveurs web mais la page peut
-          aussi les intercepter et les utiliser elle-même.
+          <pre><code class="language-html">
+            <button id ="copy" onclick="copy()">COPIER</button><br/>
+            <div id="snippetContent">
+              <p id= "snippetP">
+            &lt;button&gt;Example Button&lt;/button&gt;
+            </p>
+          </div>
+        </code></pre>
         </div>
         <div class="open"><i data-feather="plus-circle"></i></div>
       </div>
@@ -67,5 +74,6 @@
     <script>
       feather.replace();
     </script>
+    <script src="clipboard.js"></script>
   </body>
 </html>
