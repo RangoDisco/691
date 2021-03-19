@@ -1,31 +1,38 @@
 <!DOCTYPE html>
- <html lang="fr">
- <head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="style.css" />
-     <title>691 - Menu</title>
- </head>
- <body>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <title>691 - Menu</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <button id="menuBtn"><i data-feather="menu"></i></button>
+      <ul class="hidden" id="hiddenMenu">
+        <li><a href="./home.html">Accueil</a></li>
+        <li><a href="./articlesList.html">Liste des snippets</a></li>
+        <li><a href="./about.html">A propos</a></li>
+        <li><a href="./fav.html">Favoris</a></li>
+      </ul>
+    </div>
 
-     
+    <section id="enTete">
+      <img src="image/imgprojet.jpg" alt="mountain" />
+    </section>
 
-     <section id="enTete">
-         <img src="image/imgprojet.jpg" alt="mountain">
-     </section>
+    <section id="deroulant">
+      <img src="image/imgprojet.jpg" alt="bullshit" />
+      <i data-feather="arrow-left"></i>
+      <i data-feather="arrow-right" style="float: right"></i>
+    </section>
 
-     <section id="deroulant">
-         <img src="image/imgprojet.jpg" alt="bullshit">
-         <i data-feather="arrow-left"></i>
-         <i data-feather="arrow-right" style="float: right;"></i>
-       
-     </section>
-    
-     <script src="https://unpkg.com/feather-icons"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
     <script>
-        feather.replace();
+      feather.replace();
     </script>
-
- </body>
- </html> 
+  </body>
+</html>

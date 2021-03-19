@@ -18,6 +18,7 @@ h1 {
   text-align: left;
   color: var(--main-pink);
   margin: 1vw 0 1vh 2vw;
+  font-size: 2em;
 }
 
 /* Équipe */

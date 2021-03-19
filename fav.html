@@ -5,9 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/fav.css" />
+    <link rel="stylesheet" href="./css/navbar.css">
     <title>691 - Favoris</title>
 </head>
 <body>
+
+    <div class="navbar">
+        <button id="menuBtn"><i data-feather="menu"></i></button>
+        <ul class="hidden" id="hiddenMenu">
+            <li><a href="./home.html">Accueil</a></li>
+            <li><a href="./articlesList.html">Liste des snippets</a></li>
+            <li><a href="./about.html">A propos</a></li>
+            <li><a href="./fav.html">Favoris</a></li>
+        </ul>
+    </div>
 
     <!-- searchbar w/ filters -->
     <searchbar>
@@ -66,10 +77,11 @@
             <i data-feather="plus-circle"></i>
         </div>
     </content>
-    
+
+    <script src="./js/navbar.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
         feather.replace();
     </script>
 </body>
-</html>
+</html> 
