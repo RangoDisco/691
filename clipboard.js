@@ -1,5 +1,5 @@
 function copy() {
-  const copyText = document.getElementById('snippetContent');
+  const copyText = document.querySelector('.language-html');
   const input = document.createElement('textarea');
   input.value = copyText.textContent;
   document.body.appendChild(input);
@@ -8,5 +8,5 @@ function copy() {
   input.remove();
 }
 
-const btn = document.getElementById('copy');
+const btn = document.getElementById('btnCopy');
 btn.addEventListener('click', copy);

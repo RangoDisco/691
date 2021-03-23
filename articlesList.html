@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/articlesList.css" />
-    <link rel="stylesheet" href="css/fav.css">
+    <link rel="stylesheet" href="css/fav.css" />
     <link rel="stylesheet" href="./css/navbar.css" />
     <title>691 - Articles</title>
   </head>
@@ -20,63 +20,51 @@
       </ul>
     </div>
     <!--Searchbar & Filters-->
-    <div class="searchOptions">
-      <div class="searchBar">
-        <input
-          type="text"
-          placeholder="Rechercher..."
-          name="searchbar"
-          id="searchbar"
-        />
-        <i data-feather="search"></i>
+    <searchbar>
+      <div id="searchBarContainer">
+          <input type="text" placeholder="Rechercher..." name="searchbar" id="searchbar"/>
+          <i data-feather="search"></i>
       </div>
       <select name="technoFilter" id="technoFilter">
-        <option value="html">HTML</option>
-        <option value="css">CSS</option>
-        <option value="javascript">JavaScript</option>
-        <option value="git">Git</option>
-        <option value="bash">Bash (Terminal)</option>
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="javascript">JavaScript</option>
+          <option value="git">Git</option>
+          <option value="bash">Bash (Terminal)</option>
       </select>
       <div id="snippetsOnlyContainer">
-        <label for="snippetsOnly">Snippets seulement</label>
-        <input type="checkbox" name="snippetsOnly" id="snippetsOnly" />
+          <label for="snippetsOnly">Snippets seulement</label>
+          <input type="checkbox" name="snippetsOnly" id="snippetsOnly">
       </div>
-    </searchbar>
-    <!--Articles list-->
-    <div class="articlesList">
-      <div class="article">
-        <div class="articleImg">
-          <img src="img/HTML_logo.png" alt="Logo HTML" />
-        </div>
-        <div class="articleFav"><i data-feather="star"></i></div>
-        <div class="titleDesc">
-          <div class="articleTitle"><h2>TITRE</h2></div>
-
-          <div class="articleDescription">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum
+  </searchbar>
+      <!--Articles list-->
+      <div class="articlesList">
+        <div class="article">
+          <div class="articleImgAndFav">
+            <img src="img/HTML_logo.png" alt="Logo HTML" />
+            <div class="articleFav"><i data-feather="star"></i></div>
           </div>
-        </div>
-        <div class="articleSnippet">
-          <pre><code class="language-html">
-            <button id ="copy" onclick="copy()">COPIER</button><br/>
-            <div id="snippetContent">
-              <p id= "snippetP">
+          <div class="titleDesc">
+            <div class="articleTitle"><h2>&lt;table&gt; : l'élément de tableau</h2></div>
+            <div class="articleDescription">
+              L'élément HTML &lt;form&gt; représente une section d'un document qui contient des contrôles interactifs permettant à un utilisateur d'envoyer des données à un serveur web.
+            </div>
+          </div>
+          <div class="articleSnippet">
+            <button id ="btnCopy" onclick="copy()">COPIER</button><br/>
+            <pre><code class="language-html">
             &lt;form action="" method="get" class="form-example"&gt;
-            &lt;div class="form-example"&gt;
-            &lt;label for="name"&gt;Enter your name: &lt;/label&gt;
-            &lt;input type="text" name="name" id="name" required&gt;
-              </div>
-            </p>
+                &lt;div class="form-example"&gt;
+                    &lt;label for="name"&gt;Enter your name: &lt;/label&gt;
+                    &lt;input type="text" name="name" id="name" required&gt;
+                &lt;/div&gt;
+            &lt;/form&gt;
+            </code></pre>
           </div>
-        </code></pre>
+          <hr />
+          <div class="open"><i data-feather="plus-circle"></i></div>
         </div>
-        <div class="open"><i data-feather="plus-circle"></i></div>
+
       </div>
     </div>
     <!--Feather integration-->
