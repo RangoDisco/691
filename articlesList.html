@@ -20,7 +20,7 @@
       </ul>
     </div>
     <!--Searchbar & Filters-->
-    <searchbar>
+    <div class="searchbar">
       <div id="searchBarContainer">
           <input type="text" placeholder="Rechercher..." name="searchbar" id="searchbar"/>
           <i data-feather="search"></i>
@@ -36,38 +36,15 @@
           <label for="snippetsOnly">Snippets seulement</label>
           <input type="checkbox" name="snippetsOnly" id="snippetsOnly">
       </div>
-  </searchbar>
+    </div>
       <!--Articles list-->
       <div class="articlesList">
-        <div class="article">
-          <div class="articleImgAndFav">
-            <img src="img/HTML_logo.png" alt="Logo HTML" />
-            <div class="articleFav"><i data-feather="star"></i></div>
-          </div>
-          <div class="titleDesc">
-            <div class="articleTitle"><h2>&lt;table&gt; : l'élément de tableau</h2></div>
-            <div class="articleDescription">
-              L'élément HTML &lt;form&gt; représente une section d'un document qui contient des contrôles interactifs permettant à un utilisateur d'envoyer des données à un serveur web.
-            </div>
-          </div>
-          <div class="articleSnippet">
-            <button id ="btnCopy" onclick="copy()">COPIER</button><br/>
-            <pre><code class="language-html">
-            &lt;form action="" method="get" class="form-example"&gt;
-                &lt;div class="form-example"&gt;
-                    &lt;label for="name"&gt;Enter your name: &lt;/label&gt;
-                    &lt;input type="text" name="name" id="name" required&gt;
-                &lt;/div&gt;
-            &lt;/form&gt;
-            </code></pre>
-          </div>
-          <hr />
-          <div class="open"><i data-feather="plus-circle"></i></div>
-        </div>
+
 
       </div>
     </div>
     <!--Feather integration-->
+    <script src="./js/articles.js"></script>
     <script src="./js/navbar.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script>

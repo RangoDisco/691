@@ -8,5 +8,5 @@ function copy() {
   input.remove();
 }
 
-const btn = document.getElementById('btnCopy');
+const btn = document.querySelector('.btnCopy');
 btn.addEventListener('click', copy);

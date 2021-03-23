@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/fav.css" />
     <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/articlesList.css">
     <title>691 - Favoris</title>
 </head>
 <body>
 
     <div class="navbar">
         <button id="menuBtn"><i data-feather="menu"></i></button>
+
         <ul class="hidden" id="hiddenMenu">
             <li><a href="./home.html">Accueil</a></li>
             <li><a href="./articlesList.html">Liste des snippets</a></li>
@@ -21,7 +23,7 @@
     </div>
 
     <!-- searchbar w/ filters -->
-    <searchbar>
+    <div class="searchbar">
         <div id="searchBarContainer">
             <input type="text" placeholder="Rechercher..." name="searchbar" id="searchbar"/>
             <i data-feather="search"></i>
@@ -37,47 +39,20 @@
             <label for="snippetsOnly">Snippets seulement</label>
             <input type="checkbox" name="snippetsOnly" id="snippetsOnly">
         </div>
-    </searchbar>
+    </div>
 
-    <!-- article example -->
-    <content>
-        <div id="favCard">
-            <h3>&lt;button&gt;</h1>
-            <p>
-                L'élément HTML &lt;button&gt; est utilisé afin de créer un contrôle interactif ayant la forme d'un bouton et qui pourra être utilisé dans un formulaire ou dans le document.
-            </p>
-            <hr />
-            <i data-feather="plus-circle"></i>
-        </div>
+    <!-- <svg style="color: red;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18">
+        </line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg> -->
 
-        <div id="favCard">
-            <h3>&lt;button&gt;</h1>
-            <p>
-                L'élément HTML &lt;button&gt; est utilisé afin de créer un contrôle interactif ayant la forme d'un bouton et qui pourra être utilisé dans un formulaire ou dans le document.
-            </p>
-            <hr />
-            <i data-feather="plus-circle"></i>
-        </div>
+    <div class="articlesList">
+        
+    </div>
 
-        <div id="favCard">
-            <h3>&lt;button&gt;</h1>
-            <p>
-                L'élément HTML &lt;button&gt; est utilisé afin de créer un contrôle interactif ayant la forme d'un bouton et qui pourra être utilisé dans un formulaire ou dans le document.
-            </p>
-            <hr />
-            <i data-feather="plus-circle"></i>
-        </div>
-
-        <div id="favCard">
-            <h3>&lt;button&gt;</h1>
-            <p>
-                L'élément HTML &lt;button&gt; est utilisé afin de créer un contrôle interactif ayant la forme d'un bouton et qui pourra être utilisé dans un formulaire ou dans le document.
-            </p>
-            <hr />
-            <i data-feather="plus-circle"></i>
-        </div>
-    </content>
-
+    <script src="./js/articles.js"></script>
+    <script src="./js/fav.js"></script>
     <script src="./js/navbar.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
