@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="./css/home.css" />
     <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/footer.css"/>
     <title>691 - Menu</title>
   </head>
   <body>
@@ -21,38 +22,131 @@
 
     <section id="enTete">
       <div class="bloc1"></div>
-    </section>
+      <!-- début carousel -->
+      <section class="carousel" aria-label="Gallery">
+        <ol class="carousel__viewport">
+          <li id="carousel__slide1"
+              tabindex="0"
+              class="carousel__slide">
+              <!-- affiche 1 -->
+            <div class="carousel__snapper">It is a long established fact that
+              a reader will be distracted by the readable content of a page
+               when looking at its layout. The point of using Lorem Ipsum is
+               at it has a more-or-less normal distribution of letters, as 
+               opposed to using 'Content here, content here',
+              making it look like readable English.It is a long 
+              established fact that a reader will be distracted by the 
+              readable content of a page when looking at its layout. 
+              The point of using Lorem Ipsum is that it has a more-or-less normal 
+              distribution of letters, as opposed to using 'Content here, content here', 
+              making it look like readable English
+              <a href="#carousel__slide4"
+              
+                 class="carousel__prev">Go to last slide</a>
+              <a href="#carousel__slide2"
+                 class="carousel__next">Go to next slide</a>
+            </div>
+          </li>
+          <li id="carousel__slide2"
+              tabindex="0"
+              class="carousel__slide">
+              <!-- affiche 2 -->
+            <div class="carousel__snapper">It is a long established fact that
+                 a reader will be distracted by the readable content of a page
+                  when looking at its layout. The point of using Lorem Ipsum is
+                  at it has a more-or-less normal distribution of letters, as 
+                  opposed to using 'Content here, content here',
+                 making it look like readable English.It is a long 
+                 established fact that a reader will be distracted by the 
+                 readable content of a page when looking at its layout. 
+                 The point of using Lorem Ipsum is that it has a more-or-less normal 
+                 distribution of letters, as opposed to using 'Content here, content here', 
+                 making it look like readable English.</div>
+            <a href="#carousel__slide1"
+               class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide3"
+               class="carousel__next">Go to next slide</a>
+          </li>
+          <li id="carousel__slide3"
+              tabindex="0"
+              class="carousel__slide">
+              <!-- affiche 3 -->
+            <div class="carousel__snapper">t is a long established fact that
+              a reader will be distracted by the readable content of a page
+               when looking at its layout. The point of using Lorem Ipsum is
+               at it has a more-or-less normal distribution of letters, as 
+               opposed to using 'Content here, content here',
+              making it look like readable English.It is a long 
+              established fact that a reader will be distracted by the 
+              readable content of a page when looking at its layout. 
+              The point of using Lorem Ipsum is that it has a more-or-less normal 
+              distribution of letters, as opposed to using 'Content here, content here', 
+              making it look like readable English</div>
+            <a href="#carousel__slide2"
+               class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide4"
+               class="carousel__next">Go to next slide</a>
+          </li>
+          <li id="carousel__slide4"
+              tabindex="0"
+              class="carousel__slide">
+                 <!-- affiche 4 -->
+            <div class="carousel__snapper">t is a long established fact that
+              a reader will be distracted by the readable content of a page
+               when looking at its layout. The point of using Lorem Ipsum is
+               at it has a more-or-less normal distribution of letters, as 
+               opposed to using 'Content here, content here',
+              making it look like readable English.It is a long 
+              established fact that a reader will be distracted by the 
+              readable content of a page when looking at its layout. 
+              The point of using Lorem Ipsum is that it has a more-or-less normal 
+              distribution of letters, as opposed to using 'Content here, content here', 
+              making it look like readable English</div>
+            <a href="#carousel__slide3"
+               class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide1"
+               class="carousel__next">Go to first slide</a>
+          </li>
+        </ol>
+        <aside class="carousel__navigation">
+          <ol class="carousel__navigation-list">
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide1"
+                 class="carousel__navigation-button">Go to slide 1</a>
+            </li>
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide2"
+                 class="carousel__navigation-button">Go to slide 2</a>
+            </li>
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide3"
+                 class="carousel__navigation-button">Go to slide 3</a>
+            </li>
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide4"
+                 class="carousel__navigation-button">Go to slide 4</a>
+            </li>
+          </ol>
+        </aside>
+      </section>
+      <!-- fin carousel -->
 
-    <section id="deroulant">
-      <div class="flex-containers">
-        <i id="buttonL" data-feather="arrow-left"></i>
-        <div id="article1">
-          <h3>Titre</h3>
-          <p>
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout.<br />
-            The point of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters, <br />as opposed to using 'Content here,
-            content here', making it look like readable English. Many desktop
-            publishing packages and web page editors now use Lorem Ipsum as
-            their default model text, and a search for 'lorem ipsum' will
-            uncover many web sites still in their infancy.<br />
-            Various versions have evolved over the years, sometimes by accident,
-            sometimes on purpose (injected humour and the like).
-          </p>
-        </div>
 
-        <!--<div id="image2">
-             <img src="image/imgprojet.jpg" alt="bullshit2" width="200px"/>
-         </div>
 
-         <div id="image3">
-             <img src="image/imgprojet.jpg" alt="bullshit3" width="200px"/
-         </div>-->
-
-        <i id="buttonR" data-feather="arrow-right" style="float: right"></i>
-      </div>
-    </section>
+      <footer>
+        <div id="footer">
+          <div id="mention">
+              <img src="img/logo.png" alt="logo" >
+          </div>
+          
+          <div id="liste">
+            
+              <p>Contact</p>
+              <p>Mentions légales</p>
+              <p>Notre équipe</p>
+      
+          </div>
+      </footer>
     <script src="./js/navbar.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
