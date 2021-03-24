@@ -54,7 +54,7 @@
   padding: 0.5rem;
   color: var(--secondary-pink);
 }
-.favBtn{
+.favBtn {
   background-color: transparent;
   border: none;
 }
@@ -77,6 +77,10 @@
   .articleImgAndFav img {
     height: 10rem;
     width: 10rem;
+  }
+  .faved {
+    color: var(--main-pink);
+    fill: true;
   }
   .titleDesc {
     width: 30%;

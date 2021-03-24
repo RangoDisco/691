@@ -126,3 +126,32 @@ list.forEach((element) => {
     element.keywords
   );
 });
+/* Fav Functions */
+const addToFav = document.querySelectorAll('.favBtn');
+
+for (let i = 0; i < addToFav.length; i += 1) {
+  addToFav[i].addEventListener('click', () => {
+    if (addToFav[i].classList.contains('faved')) {
+      addToFav[i].classList.remove('faved');
+      localStorage.removeItem(list[i].title);
+    } else {
+      addToFav[i].classList.add('faved');
+      localStorage.setItem(list[i].title, JSON.stringify(list[i]));
+    }
+  });
+}
+function displayfav() {
+  for (let j = 0; j < localStorage.length; j += 1) {
+    const article = JSON.parse(localStorage.getItem(localStorage.key(j)));
+    console.log(article);
+    displayArticle(
+      article.techno,
+      article.title,
+      article.logo,
+      article.desc,
+      article.code,
+      article.keywords
+    );
+  }
+}
+displayfav();
