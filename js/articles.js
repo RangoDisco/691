@@ -13,7 +13,7 @@ const list = [
   new Article(
     'html',
     'table',
-    '../img/HTML_logo.svg',
+    '../img/logo-html.png',
     'blabla',
     `
     <form action="" method="get" class="form-example">
@@ -28,7 +28,7 @@ const list = [
   new Article(
     'html',
     'button',
-    '../img/HTML_logo.svg',
+    '../img/logo-html.png',
     'blabla',
     `<button>Example</button>`,
     'button html test'
@@ -36,7 +36,7 @@ const list = [
   new Article(
     'html',
     'h1',
-    '../img/HTML_logo.svg',
+    '../img/logo-html.png',
     'blabla',
     `<h1>Example</h1>`,
     'h1 title html test'
@@ -44,7 +44,7 @@ const list = [
   new Article(
     'html',
     'button',
-    '../img/HTML_logo.png',
+    '../img/logo-html.png',
     'blabla',
     `<button>Example</button>`,
     'button html test'
@@ -52,7 +52,7 @@ const list = [
   new Article(
     'html',
     'h1',
-    '../img/HTML_logo.png',
+    '../img/logo-html.png',
     'blabla',
     `<h1>Example</h1>`,
     'h1 title html test'
@@ -60,7 +60,7 @@ const list = [
   new Article(
     'html',
     'html basic',
-    '../img/HTML_logo.png',
+    '../img/logo-html.png',
     'blabla',
     `!`,
     'structure'

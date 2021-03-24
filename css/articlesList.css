@@ -64,7 +64,7 @@
     background-color: var(--secondary-grey);
     flex-direction: row;
     border-radius: 0;
-    min-height: 25vh;
+    height: 12rem;
     justify-content: space-between;
     align-items: center;
   }
@@ -75,8 +75,9 @@
     width: 20%;
   }
   .articleImgAndFav img {
-    height: 10rem;
-    width: 10rem;
+    height: 6rem;
+    width: 6rem;
+    margin: 1rem;
   }
   .faved {
     color: var(--main-pink);
