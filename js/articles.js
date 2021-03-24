@@ -13,7 +13,7 @@ const list = [
   new Article(
     'html',
     'table',
-    '../img/HTML_logo.png',
+    '../img/HTML_logo.svg',
     'blabla',
     `
     <form action="" method="get" class="form-example">
@@ -28,7 +28,7 @@ const list = [
   new Article(
     'html',
     'button',
-    '../img/HTML_logo.png',
+    '../img/HTML_logo.svg',
     'blabla',
     `<button>Example</button>`,
     'button html test'
@@ -36,7 +36,63 @@ const list = [
   new Article(
     'html',
     'h1',
-    '../img/HTML_logo.png',
+    '../img/HTML_logo.svg',
+    'blabla',
+    `<h1>Example</h1>`,
+    'h1 title html test'
+  ),
+  new Article(
+    'html',
+    'h1',
+    '../img/HTML_logo.svg',
+    'blabla',
+    `<h1>Example</h1>`,
+    'h1 title html test'
+  ),
+  new Article(
+    'html',
+    'h1',
+    '../img/HTML_logo.svg',
+    'blabla',
+    `<h1>Example</h1>`,
+    'h1 title html test'
+  ),
+  new Article(
+    'html',
+    'h1',
+    '../img/HTML_logo.svg',
+    'blabla',
+    `<h1>Example</h1>`,
+    'h1 title html test'
+  ),
+  new Article(
+    'html',
+    'h1',
+    '../img/HTML_logo.svg',
+    'blabla',
+    `<h1>Example</h1>`,
+    'h1 title html test'
+  ),
+  new Article(
+    'html',
+    'h1',
+    '../img/HTML_logo.svg',
+    'blabla',
+    `<h1>Example</h1>`,
+    'h1 title html test'
+  ),
+  new Article(
+    'html',
+    'h1',
+    '../img/HTML_logo.svg',
+    'blabla',
+    `<h1>Example</h1>`,
+    'h1 title html test'
+  ),
+  new Article(
+    'html',
+    'h1',
+    '../img/HTML_logo.svg',
     'blabla',
     `<h1>Example</h1>`,
     'h1 title html test'
@@ -116,42 +172,28 @@ const displayArticle = (techno, title, logo, desc, code, keywords) => {
   open.appendChild(modalBtn);
 };
 
-list.forEach((element) => {
-  displayArticle(
-    element.techno,
-    element.title,
-    element.logo,
-    element.desc,
-    element.code,
-    element.keywords
-  );
-});
 /* Fav Functions */
-const addToFav = document.querySelectorAll('.favBtn');
-
-for (let i = 0; i < addToFav.length; i += 1) {
-  addToFav[i].addEventListener('click', () => {
-    if (addToFav[i].classList.contains('faved')) {
-      addToFav[i].classList.remove('faved');
-      localStorage.removeItem(list[i].title);
-    } else {
-      addToFav[i].classList.add('faved');
-      localStorage.setItem(list[i].title, JSON.stringify(list[i]));
-    }
-  });
-}
-function displayfav() {
-  for (let j = 0; j < localStorage.length; j += 1) {
-    const article = JSON.parse(localStorage.getItem(localStorage.key(j)));
-    console.log(article);
+if (document.URL.includes('articlesList')) {
+  list.forEach((element) => {
     displayArticle(
-      article.techno,
-      article.title,
-      article.logo,
-      article.desc,
-      article.code,
-      article.keywords
+      element.techno,
+      element.title,
+      element.logo,
+      element.desc,
+      element.code,
+      element.keywords
     );
+  });
+  const addToFav = document.querySelectorAll('.favBtn');
+  for (let i = 0; i < addToFav.length; i += 1) {
+    addToFav[i].addEventListener('click', () => {
+      if (addToFav[i].classList.contains('faved')) {
+        addToFav[i].classList.remove('faved');
+        localStorage.removeItem(list[i].title);
+      } else {
+        addToFav[i].classList.add('faved');
+        localStorage.setItem(list[i].title, JSON.stringify(list[i]));
+      }
+    });
   }
 }
-displayfav();

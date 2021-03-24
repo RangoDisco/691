@@ -1,5 +1,5 @@
 function copy() {
-  const copyText = document.querySelector('.language-html');
+  const copyText = document.querySelector(`.langage`);
   const input = document.createElement('textarea');
   input.value = copyText.textContent;
   document.body.appendChild(input);
