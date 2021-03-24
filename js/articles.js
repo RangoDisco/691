@@ -41,11 +41,46 @@ const list = [
     `<h1>Example</h1>`,
     'h1 title html test'
   ),
-  new Article('html', 'button', '../img/HTML_logo.png','blabla', `<button>Example</button>`, 'button html test'),
-  new Article('html', 'h1', '../img/HTML_logo.png','blabla', `<h1>Example</h1>`, 'h1 title html test'),
-  new Article('html', 'html basic', '../img/HTML_logo.png', 'blabla', `!`, 'structure'),
-  new Article('css', 'flexbox', '../img/logo-css.png', 'blalbla', `{display:flex}`, 'css flex mise-en-page'),
-  new Article('css', 'grid', '../img/logo-css.png', 'blabla', `grid-containers`, 'css grid mise-en-page'),
+  new Article(
+    'html',
+    'button',
+    '../img/HTML_logo.png',
+    'blabla',
+    `<button>Example</button>`,
+    'button html test'
+  ),
+  new Article(
+    'html',
+    'h1',
+    '../img/HTML_logo.png',
+    'blabla',
+    `<h1>Example</h1>`,
+    'h1 title html test'
+  ),
+  new Article(
+    'html',
+    'html basic',
+    '../img/HTML_logo.png',
+    'blabla',
+    `!`,
+    'structure'
+  ),
+  new Article(
+    'css',
+    'flexbox',
+    '../img/logo-css.png',
+    'blalbla',
+    `{display:flex}`,
+    'css flex mise-en-page'
+  ),
+  new Article(
+    'css',
+    'grid',
+    '../img/logo-css.png',
+    'blabla',
+    `grid-containers`,
+    'css grid mise-en-page'
+  ),
 ];
 
 const articleListDiv = document.querySelector('.articlesList');

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // RECUPPERER LES ELEMENTS
 const buttons = document.querySelectorAll('.modalBtn');
 const modals = document.querySelector('.modals');
@@ -19,37 +20,10 @@ const displayModal = (article) => {
   svgImg.classList.add('modalClose');
   svgImg.src = '../img/x.svg';
   modalTitleDiv.appendChild(svgImg);
-
-  // const svg = document.createElement('svg');
-  // svg.classList.add('modalClose');
-  // svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-  // svg.setAttribute('width', '24');
-  // svg.setAttribute('height', '24');
-  // svg.setAttribute('viewBox', '0 0 24 24');
-  // svg.setAttribute('fill', 'none');
-  // svg.setAttribute('stroke', 'currentColor');
-  // svg.setAttribute('stroke-width', '2');
-  // svg.setAttribute('stroke-linecap', 'round');
-  // svg.setAttribute('stroke-linejoin', 'round');
-  // modalTitleDiv.appendChild(svg);
-
-  // const line1 = document.createElement('line');
-  // line1.setAttribute('x1', '18');
-  // line1.setAttribute('y1', '6');
-  // line1.setAttribute('x2', '6');
-  // line1.setAttribute('x2', '18');
-  // svg.appendChild(line1);
-
-  // const line2 = document.createElement('line');
-  // line2.setAttribute('x1', '6');
-  // line2.setAttribute('y1', '6');
-  // line2.setAttribute('x2', '18');
-  // line2.setAttribute('x2', '18');
-  // svg.appendChild(line2);
 };
 
 function displayfav() {
-  for (let c = 0; c < localStorage.length; c++) {
+  for (let c = 0; c < localStorage.length; c += 1) {
     const localArticle = JSON.parse(localStorage.getItem(localStorage.key(c)));
     displayArticle(
       localArticle.techno,
@@ -76,12 +50,12 @@ if (document.URL.includes('fav')) {
 }
 
 // INSTANCIER LES MODALS POUR CHAQUE ARTICLE
-for (let index = 0; index < list.length; index++) {
+for (let index = 0; index < list.length; index += 1) {
   displayModal(list[index]);
 }
 
 // EVENT CLICK OUVERTURE MODAL
-for (let h = 0; h < buttons.length; h++) {
+for (let h = 0; h < buttons.length; h += 1) {
   buttons[h].addEventListener('click', () => {
     document.querySelectorAll('.modal-container')[h].classList.add('show');
   });
@@ -91,7 +65,7 @@ console.log(buttons.length);
 
 // EVENT CLICK FERMETURE MODAL
 const closeBtns = document.querySelectorAll('.modalClose');
-for (let b = 0; b < closeBtns.length; b++) {
+for (let b = 0; b < closeBtns.length; b += 1) {
   closeBtns[b].addEventListener('click', () => {
     document.querySelectorAll('.modal-container')[b].classList.remove('show');
   });
