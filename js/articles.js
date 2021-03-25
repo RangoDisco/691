@@ -65,6 +65,91 @@ const list = [
     `grid-containers`,
     'css grid mise-en-page'
   ),
+  new Article(
+    'css',
+    'CSS Syntax',
+    '../img/logo-css.png',
+    `Le sélecteur pointe vers l'élément HTML que vous souhaitez styliser.
+    Le bloc de déclaration contient une ou plusieurs déclarations séparées par des points-virgules.
+    Chaque déclaration comprend un nom de propriété CSS et une valeur, séparés par deux-points.
+    Plusieurs déclarations CSS sont séparées par des points-virgules, et les blocs de déclaration sont entourés d'accolades.`,
+    'h1 {color:blue; font-size:12px;}',
+    'bases css '
+  ),
+  new Article(
+    'Javascript',
+    'Introduction JS',
+    '../img/logo-js.png',
+    `JavaScript peut modifier le contenu HTML
+    L'une des nombreuses méthodes HTML JavaScript est getElementById().
+    L'exemple ci-dessous "trouve" un élément HTML (avec id="demo") et change le contenu de l'élément
+     (innerHTML) en "Bonjour JavaScript"`,
+    'document.getElementById("demo").innerHTML = "Hello JavaScript";',
+    'javascript DOM '
+  ),
+  new Article(
+    'Javascript',
+    'Variables',
+    '../img/logo-js.png',
+    `En JavaScript, il y a différents types de variables. Historiquement,
+     il n'était possible de créer une variable qu'avec var. Mais depuis quelques années 
+     (je te laisse chercher depuis quand !),
+     deux autres types de variables sont devenus les standards. "let" et "const"`,
+    `1let myCity = "Paris";
+      2myCity = "Berlin";
+      3console.log(myCity);
+      4// Berlin`,
+    'javascript variables'
+  ),
+  new Article(
+    'Javascript',
+    'DOM',
+    '../img/logo-js.png',
+    `DOM signifie Document Object Model. C'est une interface utilisée pour manipuler le contenu 
+    d'une page HTML.
+    Lorsque ton navigateur analyse ton code HTML et CSS, 
+    il crée également une représentation sous la forme d'un objet Javascript du document.
+    Nous utiliserons ce modèle pour manipuler notre page web.`,
+    `1const title = document.getElementById('title');
+    2const heading = document.getElementsByTagName('h1');`,
+    'javascript DOM'
+  ),
+  new Article(
+    'GitHub',
+    'Introduction',
+    '../img/logo-git.png',
+    `GitHub est une plateforme en ligne très populaire offrant de nombreux services aux développeurs.
+      Ses principales fonctionnalités sont:\n
+     •L'hébergement de code\n
+     •Le travail collaboratif entre les membres d'une équipe\n
+     •La découverte de nouveaux projets (souvent open-source) 
+     et collaboration entre développeurs du monde entier`,
+    'https://youtu.be/BCQHnlnPusY',
+    'github introduction'
+  ),
+  new Article(
+    'GitHub',
+    'Merge & Conflit',
+    '../img/logo-git.png',
+    `ce qu'on appelle une fusion (merging). Elle est réalisée par la commande "git pull" 
+    (il y a d'autres façons de le faire, mais c'est suffisant pour l'instant), 
+    qui te permet de mettre à jour tes fichiers locaux avec les fichiers distants
+     (par exemple, sur le repo GitHub).`,
+    'git pull',
+    'merge conflit '
+  ),
+  new Article(
+    'Github',
+    'Revert',
+    '../img/logo-git.png',
+    `git revert est utilisé pour enregistrer de nouveaux commits
+     afin d'inverser l'effet de certains commits antérieurs 
+     (souvent seulement défectueux).`,
+    `git revert [--[no-]edit] [-n] [-m parent-number] [-s] [-S[<keyid>]]
+     <commit>…
+     git revert (--continue | --skip | --abort | --quit)`,
+    'git revert erreur'
+  ),
 ];
 
 const articleListDiv = document.querySelector('.articlesList');

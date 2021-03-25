@@ -20,6 +20,30 @@ const displayModal = (article) => {
   svgImg.classList.add('modalClose');
   svgImg.src = '../img/x.svg';
   modalTitleDiv.appendChild(svgImg);
+
+  const modalBody = document.createElement('div');
+  modalBody.classList.add('modal-body');
+  modalBody.style.minHeight = '20rem';
+  modalContainer.appendChild(modalBody);
+
+  const description = document.createElement('p');
+  description.innerHTML = article.desc;
+  modalBody.appendChild(description);
+
+  const trait = document.createElement('hr');
+  modalBody.appendChild(trait);
+
+  const btnCopy = document.createElement('button');
+  btnCopy.classList.add('btnCopy');
+  btnCopy.innerHTML = 'COPIER';
+  modalBody.appendChild(btnCopy);
+
+  const pre = document.createElement('pre');
+  modalBody.appendChild(pre);
+
+  const code = document.createElement('code');
+  code.innerText = article.code;
+  pre.appendChild(code);
 };
 
 function displayfav() {
@@ -56,13 +80,11 @@ for (let index = 0; index < list.length; index += 1) {
 }
 
 // EVENT CLICK OUVERTURE MODAL
-for (let h = 0; h < buttons.length; h += 1) {
-  buttons[h].addEventListener('click', () => {
+for (let h = 0; h < document.querySelectorAll('.modalBtn').length; h += 1) {
+  document.querySelectorAll('.modalBtn')[h].addEventListener('click', () => {
     document.querySelectorAll('.modal-container')[h].classList.add('show');
   });
 }
-
-console.log(buttons.length);
 
 // EVENT CLICK FERMETURE MODAL
 const closeBtns = document.querySelectorAll('.modalClose');
