@@ -39,6 +39,7 @@ function displayfav() {
 if (document.URL.includes('fav')) {
   if (localStorage.length > 0) {
     displayfav();
+    favorite();
   } else {
     const noArticles = document.createElement('h2');
     noArticles.innerHTML = "Pas d'articles en favoris détectés";
