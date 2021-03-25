@@ -158,16 +158,16 @@ const displayArticle = (techno, title, logo, desc, code, keywords) => {
 
 /* Fav Functions */
 if (document.URL.includes('articlesList')) {
-  list.forEach((element) => {
-    displayArticle(
-      element.techno,
-      element.title,
-      element.logo,
-      element.desc,
-      element.code,
-      element.keywords
-    );
-  });
+  // list.forEach((element) => {
+  //   displayArticle(
+  //     element.techno,
+  //     element.title,
+  //     element.logo,
+  //     element.desc,
+  //     element.code,
+  //     element.keywords
+  //   );
+  // });
   const addToFav = document.querySelectorAll('.favBtn');
   for (let i = 0; i < addToFav.length; i += 1) {
     addToFav[i].addEventListener('click', () => {
