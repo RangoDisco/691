@@ -228,17 +228,18 @@ const displayArticle = (techno, title, logo, desc, code, keywords) => {
 };
 
 /* Fav Functions */
-if (document.URL.includes('articlesList')) {
-  // list.forEach((element) => {
-  //   displayArticle(
-  //     element.techno,
-  //     element.title,
-  //     element.logo,
-  //     element.desc,
-  //     element.code,
-  //     element.keywords
-  //   );
-  // });
+// if (document.URL.includes('articlesList')) {
+// list.forEach((element) => {
+//   displayArticle(
+//     element.techno,
+//     element.title,
+//     element.logo,
+//     element.desc,
+//     element.code,
+//     element.keywords
+//   );
+// });
+// }
 function favorite() {
   const addToFav = document.querySelectorAll('.favBtn');
   for (let i = 0; i < addToFav.length; i += 1) {
@@ -260,16 +261,16 @@ function favorite() {
 }
 
 if (document.URL.includes('articlesList')) {
-  list.forEach((element) => {
-    displayArticle(
-      element.techno,
-      element.title,
-      element.logo,
-      element.desc,
-      element.code,
-      element.keywords
-    );
-  });
+  // list.forEach((element) => {
+  //   displayArticle(
+  //     element.techno,
+  //     element.title,
+  //     element.logo,
+  //     element.desc,
+  //     element.code,
+  //     element.keywords
+  //   );
+  // });
   favorite();
 }
 
@@ -281,3 +282,43 @@ for (let z = 0; z < btn.length; z += 1) {
     navigator.clipboard.writeText(codeToCopy);
   });
 }
+
+// SEARCHBAR
+const searchbar = document.getElementById('searchbar');
+
+searchbar.value = null;
+
+searchbar.addEventListener('focus', () => {
+  document.querySelectorAll('.article').forEach((i) => {
+    i.remove();
+  });
+});
+
+searchbar.addEventListener('change', () => {
+  let results = [];
+
+  list.forEach((article) => {
+    if (article.keywords.includes(searchbar.value)) {
+      results = list.filter((i) => i.keywords.includes(searchbar.value));
+    }
+  });
+
+  searchbar.blur();
+  searchbar.value = null;
+
+  console.log(results);
+
+  for (let index = 0; index < results.length; index += 1) {
+    displayArticle(
+      results[index].techno,
+      results[index].title,
+      results[index].logo,
+      results[index].desc,
+      results[index].code,
+      results[index].keywords
+    );
+    document.querySelectorAll('.article').forEach((i) => {
+      i.classList.add('show');
+    });
+  }
+});
