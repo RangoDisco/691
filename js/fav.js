@@ -20,6 +20,30 @@ const displayModal = (article) => {
   svgImg.classList.add('modalClose');
   svgImg.src = '../img/x.svg';
   modalTitleDiv.appendChild(svgImg);
+
+  const modalBody = document.createElement('div');
+  modalBody.classList.add('modal-body');
+  modalBody.style.minHeight = '20rem'
+  modalContainer.appendChild(modalBody);
+
+  const description = document.createElement('p')
+  description.innerHTML = article.desc
+  modalBody.appendChild(description)
+
+  const trait = document.createElement('hr')
+  modalBody.appendChild(trait)
+
+  const btnCopy = document.createElement('button');
+  btnCopy.classList.add('btnCopy');
+  btnCopy.innerHTML = 'COPIER';
+  modalBody.appendChild(btnCopy);
+
+  const pre = document.createElement('pre')
+  modalBody.appendChild(pre)
+
+  const code = document.createElement('code')
+  code.innerText = article.code
+  pre.appendChild(code)
 };
 
 function displayfav() {
