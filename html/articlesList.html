@@ -7,12 +7,29 @@
     <link rel="stylesheet" href="../css/articlesList.css" />
     <link rel="stylesheet" href="../css/fav.css" />
     <link rel="stylesheet" href="../css/navbar.css" />
-    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/footer.css" />
     <title>691 - Articles</title>
   </head>
   <body>
     <div class="navbar">
-      <button id="menuBtn"><i data-feather="menu"></i></button>
+      <button id="menuBtn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-menu"
+        >
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
       <ul class="hidden" id="hiddenMenu">
         <li><a href="../html/home.html">Accueil</a></li>
         <li><a href="../html/articlesList.html">Liste des snippets</a></li>
@@ -23,55 +40,60 @@
     <!--Searchbar & Filters-->
     <div class="searchbar">
       <div id="searchBarContainer">
-          <input type="text" placeholder="Rechercher..." name="searchbar" id="searchbar"/>
-          <i data-feather="search"></i>
+        <input
+          type="text"
+          placeholder="Rechercher..."
+          name="searchbar"
+          id="searchbar"
+        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-search"
+        >
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
       </div>
       <select name="technoFilter" id="technoFilter">
-          <option value="html">HTML</option>
-          <option value="css">CSS</option>
-          <option value="javascript">JavaScript</option>
-          <option value="git">Git</option>
-          <option value="bash">Bash (Terminal)</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javascript">JavaScript</option>
+        <option value="git">Git</option>
+        <option value="bash">Bash (Terminal)</option>
       </select>
       <div id="snippetsOnlyContainer">
-          <label for="snippetsOnly">Snippets seulement</label>
-          <input type="checkbox" name="snippetsOnly" id="snippetsOnly">
+        <label for="snippetsOnly">Snippets seulement</label>
+        <input type="checkbox" name="snippetsOnly" id="snippetsOnly" />
       </div>
     </div>
-      <!--Articles list-->
-      <div class="articlesList">
+    <!--Articles list-->
+    <div class="articlesList"></div>
 
-
-      </div>
-    
-      <div class="modals">
-
-      </div>
+    <div class="modals"></div>
     <!-- footer -->
     <div id="footer">
       <div id="mention">
-          <img src="img/logo.png" alt="logo" >
+          <img src="../img/logo.png" alt="logo" >
       </div>
-      
+
       <div id="liste">
-        
-          <p>Contact</p>
-          <p>Mentions légales</p>
-          <p>Notre équipe</p>
-  
+        <li><a href="./home.html">Accueil</a></li>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="../html/about.html">Notre équipe</a></li>
       </div>
-  
-      
-  </div>
-    <!--Feather integration-->
+    </div>
     <script src="../js/articles.js"></script>
     <script src="../js/fav.js"></script>
     <script src="../js/navbar.js"></script>
     <script src="../js/searchbar.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script>
-      feather.replace();
-    </script>
     <script src="../js/clipboard.js"></script>
   </body>
 </html>
