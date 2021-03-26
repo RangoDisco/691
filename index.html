@@ -1,12 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    ok
-</body>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <title>691 - Menu</title>
+  </head>
+  <body>
+    <nav>
+      <button id="menuBtn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-menu"
+        >
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <ul class="hidden" id="hiddenMenu">
+        <li><a href="./index.html">Accueil</a></li>
+        <li><a href="./html/articlesList.html">Liste des snippets</a></li>
+        <li><a href="./html/about.html">A propos</a></li>
+        <li><a href="./html/fav.html">Favoris</a></li>
+      </ul>
+    </nav>
+
+    <section id="enTete">
+      <div class="title"><h2>La bible des snippets</h2></div>
+      <div class="bloc1">
+        <!-- <img src="../img/header.svg" alt="" srcset=""> -->
+      </div>
+    
+
+    <section class="bloc">
+      <div class="bloc2">
+      </div>
+      
+      <div class="bloc2">
+        
+      </div>
+
+      <div class="bloc2">
+        
+      
+    </section>
+
+    <section class="link">
+      <div>
+        <a href="../html/articlesList.html"><img src="../img/link-home.svg"></a>
+      </div>
+      <div>
+        <a href="./html/articlesList.html"><img src="./img/link-home.svg"></a>
+      </div>
+      <div>
+        <a href="./html/articlesList.html"><img src="./img/link-home.svg"></a>
+      </div>
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    </section>
+
+    <footer>
+      <div id="footer">
+        <div id="mention">
+          <img src="./img/logo.png" alt="logo" />
+        </div>
+
+        <div id="liste">
+          <li><a href="./index.html">Accueil</a></li>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="./about.html">Notre équipe</a></li>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/articles.js"></script>
+    <script src="./js/home.js"></script>
+  </body>
 </html>

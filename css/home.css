@@ -5,6 +5,8 @@
 }
 
 #enTete {
+  display: flex;
+  flex-direction: column;
   max-width: 100%;
   height: auto;
   margin: 0 auto;
@@ -49,49 +51,67 @@ html {
 body {
   width: 100%;
 }
-.favhome{
+.favhome {
   display: flex;
   margin-left: 40%;
   justify-content: space-between;
   height: 20%;
   width: 30%;
   border: 1px 1px 1px black;
-  
 }
 .bloc2 {
-  margin-top: 20%;
+  margin-top: 10%;
   width: 33%;
   height: 250px;
   background-color: lightgray;
   display: inline-block;
   align-items: flex-start;
   margin-bottom: 30px;
-   
-  }
+}
 
-  .link{
-    display: flex;
-    justify-content: space-around;
-  }
- 
+.link {
+  display: flex;
+  justify-content: space-around;
+}
 
-  #myBtn {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 20px; /* Place the button at the bottom of the page */
-    right: 50%; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    background-color: #e8175d; /* Set a background color */
-    color:lightgray; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
-  }
-  
-  #myBtn:hover {
-    background-color: #555; /* Add a dark-grey background on hover */
-    color: #e8175d;
-  }
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 50%; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #e8175d; /* Set a background color */
+  color: lightgray; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+  color: #e8175d;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.bloc1 {
+  height: 15rem;
+  width: 50%;
+  background-image: url(../img/header.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  align-self: center;
+  background-position: center;
+}
+
+.bloc {
+  padding: 10px;
+}
