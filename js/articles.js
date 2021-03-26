@@ -230,20 +230,6 @@ const displayArticle = (techno, title, logo, desc, code, keywords) => {
   open.appendChild(modalBtn);
 };
 
-/* Fav Functions */
-// if (document.URL.includes('articlesList')) {
-// list.forEach((element) => {
-//   displayArticle(
-//     element.techno,
-//     element.title,
-//     element.logo,
-//     element.desc,
-//     element.code,
-//     element.keywords
-//   );
-// });
-// }
-
 function favorite(artResults) {
   const addToFav = document.querySelectorAll('.favBtn');
   for (let i = 0; i < addToFav.length; i += 1) {
@@ -300,8 +286,6 @@ searchbar.addEventListener('change', () => {
 
   searchbar.blur();
   searchbar.value = null;
-
-  console.log(results);
 
   for (let index = 0; index < results.length; index += 1) {
     displayArticle(
