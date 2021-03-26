@@ -63,6 +63,9 @@ function displayfav() {
 if (document.URL.includes('fav')) {
   if (localStorage.length > 0) {
     displayfav();
+    document.querySelectorAll('.article').forEach((i) => {
+      i.classList.add('show');
+    });
     favorite();
   } else {
     const noArticles = document.createElement('h2');

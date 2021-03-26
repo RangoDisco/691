@@ -240,19 +240,23 @@ const displayArticle = (techno, title, logo, desc, code, keywords) => {
 //   );
 // });
 // }
-function favorite() {
+
+function favorite(artResults) {
   const addToFav = document.querySelectorAll('.favBtn');
   for (let i = 0; i < addToFav.length; i += 1) {
     addToFav[i].addEventListener('click', () => {
       if (addToFav[i].classList.contains('faved')) {
         addToFav[i].classList.remove('faved');
-        localStorage.removeItem(list[i].title);
+        localStorage.removeItem(artResults[i].title);
       } else {
         addToFav[i].classList.add('faved');
-        localStorage.setItem(list[i].title, JSON.stringify(list[i]));
+        localStorage.setItem(
+          artResults[i].title,
+          JSON.stringify(artResults[i])
+        );
       }
     });
-    if (list[i].title in localStorage) {
+    if (artResults[i].title in localStorage) {
       addToFav[i].classList.add('faved');
     } else {
       addToFav[i].classList.remove('faved');
@@ -260,28 +264,16 @@ function favorite() {
   }
 }
 
-if (document.URL.includes('articlesList')) {
-  // list.forEach((element) => {
-  //   displayArticle(
-  //     element.techno,
-  //     element.title,
-  //     element.logo,
-  //     element.desc,
-  //     element.code,
-  //     element.keywords
-  //   );
-  // });
-  favorite();
-}
-
 /* Copier function */
-const btn = document.querySelectorAll('.btnCopy');
-for (let z = 0; z < btn.length; z += 1) {
-  btn[z].addEventListener('click', () => {
-    const codeToCopy = list[z].code;
-    navigator.clipboard.writeText(codeToCopy);
-  });
-}
+const copySetup = (articlesResults) => {
+  const btn = document.querySelectorAll('.btnCopy');
+  for (let z = 0; z < btn.length; z += 1) {
+    btn[z].addEventListener('click', () => {
+      const codeToCopy = articlesResults[z].code;
+      navigator.clipboard.writeText(codeToCopy);
+    });
+  }
+};
 
 // SEARCHBAR
 const searchbar = document.getElementById('searchbar');
@@ -321,4 +313,6 @@ searchbar.addEventListener('change', () => {
       i.classList.add('show');
     });
   }
+  favorite(results);
+  copySetup(results);
 });
