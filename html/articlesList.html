@@ -11,7 +11,7 @@
     <title>691 - Articles</title>
   </head>
   <body>
-    <div class="navbar">
+    <nav class="navbar">
       <button id="menuBtn">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -36,9 +36,9 @@
         <li><a href="../html/about.html">A propos</a></li>
         <li><a href="../html/fav.html">Favoris</a></li>
       </ul>
-    </div>
+    </nav>
     <!--Searchbar & Filters-->
-    <div class="searchbar">
+    <section class="searchbar">
       <div id="searchBarContainer">
         <input
           type="text"
@@ -73,23 +73,25 @@
         <label for="snippetsOnly">Snippets seulement</label>
         <input type="checkbox" name="snippetsOnly" id="snippetsOnly" />
       </div>
-    </div>
+    </section>
     <!--Articles list-->
-    <div class="articlesList"></div>
+    <section class="articlesList"></section>
 
     <div class="modals"></div>
     <!-- footer -->
-    <div id="footer">
-      <div id="mention">
-          <img src="../img/logo.png" alt="logo" >
-      </div>
+    <footer>
+      <div id="footer">
+        <div id="mention">
+          <img src="../img/logo.png" alt="logo" />
+        </div>
 
-      <div id="liste">
-        <li><a href="./home.html">Accueil</a></li>
-        <li><a href="#">Mentions légales</a></li>
-        <li><a href="../html/about.html">Notre équipe</a></li>
+        <div id="liste">
+          <li><a href="./home.html">Accueil</a></li>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="../html/about.html">Notre équipe</a></li>
+        </div>
       </div>
-    </div>
+    </footer>
     <script src="../js/articles.js"></script>
     <script src="../js/fav.js"></script>
     <script src="../js/navbar.js"></script>
