@@ -91,9 +91,12 @@
   }
   .articleSnippet {
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
     text-align: left;
     width: 50%;
+    height: 100%;
+    background-color: var(--main-black);
+    color: var(--secondary-pink);
   }
   .articleSnippet button {
     width: 20%;

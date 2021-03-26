@@ -73,7 +73,10 @@ const list = [
     Le bloc de déclaration contient une ou plusieurs déclarations séparées par des points-virgules.
     Chaque déclaration comprend un nom de propriété CSS et une valeur, séparés par deux-points.
     Plusieurs déclarations CSS sont séparées par des points-virgules, et les blocs de déclaration sont entourés d'accolades.`,
-    'h1 {color:blue; font-size:12px;}',
+    `h1 {
+      color:blue; 
+      font-size:12px;
+    }`,
     'bases css '
   ),
   new Article(
@@ -315,4 +318,8 @@ searchbar.addEventListener('change', () => {
   }
   favorite(results);
   copySetup(results);
+  // INSTANCIER LES MODALS POUR CHAQUE ARTICLE
+  for (let index = 0; index < list.length; index += 1) {
+    displayModal(results[index]);
+  }
 });

@@ -18,31 +18,31 @@
   visibility: hidden;
   height: 0;
 }
-.navbar {
+nav {
   width: 100%;
 }
-.navbar button {
+nav button {
   width: 100%;
   text-align: left;
   background-color: var(--secondary-grey);
   box-shadow: 0px 0px 10px black;
   border: none;
 }
-.navbar button svg {
+nav button svg {
   height: 2em;
   width: 2em;
 }
-.navbar ul {
+nav ul {
   display: flex;
   flex-direction: column;
   list-style-type: none;
   background-color: var(--secondary-grey);
 }
-.navbar ul li svg {
+nav ul li svg {
   width: 1.5em;
   height: 1.5em;
 }
-.navbar ul li a {
+nav ul li a {
   text-decoration: none;
   color: var(--main-black);
   font-size: 1.5em;
@@ -54,14 +54,14 @@
     visibility: unset;
     height: unset;
   }
-  .navbar button {
+  nav button {
     display: none;
   }
-  .navbar ul {
+  nav ul {
     flex-direction: row;
     justify-content: space-evenly;
   }
-  .navbar ul li a {
+  nav ul li a {
     font-size: 1em;
   }
 }
