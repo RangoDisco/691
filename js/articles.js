@@ -73,7 +73,10 @@ const list = [
     Le bloc de déclaration contient une ou plusieurs déclarations séparées par des points-virgules.
     Chaque déclaration comprend un nom de propriété CSS et une valeur, séparés par deux-points.
     Plusieurs déclarations CSS sont séparées par des points-virgules, et les blocs de déclaration sont entourés d'accolades.`,
-    'h1 {color:blue; font-size:12px;}',
+    `h1 {
+      color:blue; 
+      font-size:12px;
+    }`,
     'bases css '
   ),
   new Article(
@@ -227,20 +230,6 @@ const displayArticle = (techno, title, logo, desc, code, keywords) => {
   open.appendChild(modalBtn);
 };
 
-/* Fav Functions */
-// if (document.URL.includes('articlesList')) {
-// list.forEach((element) => {
-//   displayArticle(
-//     element.techno,
-//     element.title,
-//     element.logo,
-//     element.desc,
-//     element.code,
-//     element.keywords
-//   );
-// });
-// }
-
 function favorite(artResults) {
   const addToFav = document.querySelectorAll('.favBtn');
   for (let i = 0; i < addToFav.length; i += 1) {
@@ -298,8 +287,6 @@ searchbar.addEventListener('change', () => {
   searchbar.blur();
   searchbar.value = null;
 
-  console.log(results);
-
   for (let index = 0; index < results.length; index += 1) {
     displayArticle(
       results[index].techno,
@@ -315,4 +302,8 @@ searchbar.addEventListener('change', () => {
   }
   favorite(results);
   copySetup(results);
+  // INSTANCIER LES MODALS POUR CHAQUE ARTICLE
+  for (let index = 0; index < list.length; index += 1) {
+    displayModal(results[index]);
+  }
 });
