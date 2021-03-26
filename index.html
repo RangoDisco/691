@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/footer.css" />
     <title>691 - Menu</title>
   </head>
+
   <body>
     <nav>
       <button id="menuBtn">
@@ -30,7 +31,7 @@
         </svg>
       </button>
       <ul class="hidden" id="hiddenMenu">
-        <li><a href="./index.html">Accueil</a></li>
+        <li><a href="/">Accueil</a></li>
         <li><a href="./html/articlesList.html">Liste des snippets</a></li>
         <li><a href="./html/about.html">A propos</a></li>
         <li><a href="./html/fav.html">Favoris</a></li>
@@ -38,37 +39,38 @@
     </nav>
 
     <section id="enTete">
-      <div class="title"><h2>La bible des snippets</h2></div>
+      <div class="title">
+        <h2>La bible des snippets</h2>
+      </div>
       <div class="bloc1">
         <!-- <img src="../img/header.svg" alt="" srcset=""> -->
       </div>
-    
-
+    </section>
     <section class="bloc">
-      <div class="bloc2">
-      </div>
-      
-      <div class="bloc2">
-        
-      </div>
+      <div class="bloc2"></div>
 
-      <div class="bloc2">
-        
-      
+      <div class="bloc2"></div>
+
+      <div class="bloc2"></div>
     </section>
 
     <section class="link">
       <div>
-        <a href="../html/articlesList.html"><img src="./img/link-home.svg"></a>
+        <a href="../html/articlesList.html"
+          ><img src="./img/link-home.svg" alt="link-svg"
+        /></a>
       </div>
       <div>
-        <a href="./html/articlesList.html"><img src="./img/link-home.svg"></a>
+        <a href="./html/articlesList.html"
+          ><img src="./img/link-home.svg" alt="link-svg"
+        /></a>
       </div>
       <div>
-        <a href="./html/articlesList.html"><img src="./img/link-home.svg"></a>
+        <a href="./html/articlesList.html"
+          ><img src="./img/link-home.svg" alt="link-svg"
+        /></a>
       </div>
       <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-
     </section>
 
     <footer>
@@ -78,9 +80,11 @@
         </div>
 
         <div id="liste">
-          <li><a href="./index.html">Accueil</a></li>
-          <li><a href="#">Mentions légales</a></li>
-          <li><a href="./about.html">Notre équipe</a></li>
+          <ul>
+            <li><a href="/">Accueil</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="./about.html">Notre équipe</a></li>
+          </ul>
         </div>
       </div>
     </footer>

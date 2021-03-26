@@ -80,7 +80,6 @@
   }
   .faved {
     color: var(--main-pink);
-    fill: true;
   }
   .titleDesc {
     width: 30%;
