@@ -43,22 +43,6 @@ const list = [
   ),
   new Article(
     'html',
-    'button',
-    '../img/logo-html.png',
-    'blabla',
-    `<button>Example</button>`,
-    'button html test'
-  ),
-  new Article(
-    'html',
-    'h1',
-    '../img/logo-html.png',
-    'blabla',
-    `<h1>Example</h1>`,
-    'h1 title html test'
-  ),
-  new Article(
-    'html',
     'html basic',
     '../img/logo-html.png',
     'blabla',
@@ -190,7 +174,8 @@ const displayArticle = (techno, title, logo, desc, code, keywords) => {
 
   const favBtn = document.createElement('button');
   favBtn.classList.add('favBtn');
-  favBtn.innerHTML = '<i data-feather="star"></i>';
+  favBtn.innerHTML =
+    '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>';
   articleFav.appendChild(favBtn);
 
   const titleDesc = document.createElement('div');
@@ -237,32 +222,97 @@ const displayArticle = (techno, title, logo, desc, code, keywords) => {
 
   const modalBtn = document.createElement('button');
   modalBtn.classList.add('modalBtn');
-  modalBtn.innerHTML = '<i data-feather="plus-circle"></i>';
+  modalBtn.innerHTML =
+    '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>';
   open.appendChild(modalBtn);
 };
 
 /* Fav Functions */
-if (document.URL.includes('articlesList')) {
-  list.forEach((element) => {
-    displayArticle(
-      element.techno,
-      element.title,
-      element.logo,
-      element.desc,
-      element.code,
-      element.keywords
-    );
-  });
+// if (document.URL.includes('articlesList')) {
+// list.forEach((element) => {
+//   displayArticle(
+//     element.techno,
+//     element.title,
+//     element.logo,
+//     element.desc,
+//     element.code,
+//     element.keywords
+//   );
+// });
+// }
+
+function favorite(artResults) {
   const addToFav = document.querySelectorAll('.favBtn');
   for (let i = 0; i < addToFav.length; i += 1) {
     addToFav[i].addEventListener('click', () => {
       if (addToFav[i].classList.contains('faved')) {
         addToFav[i].classList.remove('faved');
-        localStorage.removeItem(list[i].title);
+        localStorage.removeItem(artResults[i].title);
       } else {
         addToFav[i].classList.add('faved');
-        localStorage.setItem(list[i].title, JSON.stringify(list[i]));
+        localStorage.setItem(
+          artResults[i].title,
+          JSON.stringify(artResults[i])
+        );
       }
     });
+    if (artResults[i].title in localStorage) {
+      addToFav[i].classList.add('faved');
+    } else {
+      addToFav[i].classList.remove('faved');
+    }
   }
 }
+
+/* Copier function */
+const copySetup = (articlesResults) => {
+  const btn = document.querySelectorAll('.btnCopy');
+  for (let z = 0; z < btn.length; z += 1) {
+    btn[z].addEventListener('click', () => {
+      const codeToCopy = articlesResults[z].code;
+      navigator.clipboard.writeText(codeToCopy);
+    });
+  }
+};
+
+// SEARCHBAR
+const searchbar = document.getElementById('searchbar');
+
+searchbar.value = null;
+
+searchbar.addEventListener('focus', () => {
+  document.querySelectorAll('.article').forEach((i) => {
+    i.remove();
+  });
+});
+
+searchbar.addEventListener('change', () => {
+  let results = [];
+
+  list.forEach((article) => {
+    if (article.keywords.includes(searchbar.value)) {
+      results = list.filter((i) => i.keywords.includes(searchbar.value));
+    }
+  });
+
+  searchbar.blur();
+  searchbar.value = null;
+
+  console.log(results);
+
+  for (let index = 0; index < results.length; index += 1) {
+    displayArticle(
+      results[index].techno,
+      results[index].title,
+      results[index].logo,
+      results[index].desc,
+      results[index].code,
+      results[index].keywords
+    );
+    document.querySelectorAll('.article').forEach((i) => {
+      i.classList.add('show');
+    });
+  }
+  favorite(results);
+  copySetup(results);
+});
